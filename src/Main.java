@@ -1,15 +1,31 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.io.FileInputStream;
+import java.io.IOException;
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        FileInputStream fis = null;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        try {
+            fis = new FileInputStream("C:\\Users\\HP\\OneDrive\\Documents\\sample.txt");
+
+            System.out.println("Reading contents of the file:\n");
+
+            int data;
+            while ((data = fis.read()) != -1) {
+                System.out.print((char) data);
+            }
+
+            System.out.println("\n\nFile reading completed!");
+
+        } catch (IOException e) {
+            System.out.println("Error reading file: " + e.getMessage());
+        } finally {
+            try {
+                if (fis != null) {
+                    fis.close();
+                }
+            } catch (IOException e) {
+                System.out.println("Error closing file: " + e.getMessage());
+            }
         }
     }
 }
