@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 class Printer {
     public static void main(String[] args) {
-        File file = new File("C:\\Users\\HP\\Documents\\sample.txt");
+        File file = new File("C:\\Users\\HP\\OneDrive\\Documents\\sample.txt");
         try (PrintWriter writer = new PrintWriter(new FileWriter(file, true))) {
             writer.println("Don't miss");
             writer.println("See you then");
