@@ -11,6 +11,12 @@ public class StudentMain {
             //
         }
 
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
+            Student s = (Student) in.readObject();
+        }catch (IOException | ClassNotFoundException e) {
+            //
+        }
+
 
         student.setFirstName("John");
         student.setLastName("Doe");
