@@ -13,6 +13,7 @@ public class StudentMain {
 
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
             Student s = (Student) in.readObject();
+            System.out.println(s.getFirstName() + " " + s.getLastName());
         }catch (IOException | ClassNotFoundException e) {
             //
         }
