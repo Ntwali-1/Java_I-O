@@ -17,6 +17,7 @@ public class Student implements Serializable {
         return lastName;
     }
 
+    //Setter method for last name
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
