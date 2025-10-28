@@ -6,7 +6,7 @@ public class StudentMain {
         student.setFirstName("John");
         student.setLastName("Doe");
 
-        File file = new File("C:\\Users\\HP\\OneDrive\\Documents\\student.ser");
+        File file = new File("C:\\Users\\HP\\OneDrive\\Documents\\student.ser")
 
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
             out.writeObject(student);
