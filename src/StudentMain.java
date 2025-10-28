@@ -18,7 +18,7 @@ public class StudentMain {
             Student s = (Student) in.readObject();
             System.out.println(s.getFirstName() + " " + s.getLastName());
         }catch (IOException | ClassNotFoundException e) {
-            //
+
         }
 
 
