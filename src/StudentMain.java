@@ -11,7 +11,7 @@ public class StudentMain {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
             out.writeObject(student);
         }catch (IOException e) {
-            //
+
         }
 
         try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
